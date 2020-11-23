@@ -27,32 +27,31 @@
                 android:contentDescription="@string/film_cover" />
 
             <Button
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="44dp"
                 android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_baseline_arrow_back_ios_24"
                 android:text="Back"
-                android:textStyle="normal"
+                android:fontFamily="@font/roboto_regular"
                 android:textAlignment="textStart"
                 android:textColor="#6D6D80"
-                android:drawableLeft="@drawable/ic_baseline_arrow_back_ios_24"
-                />
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
                 android:id="@+id/film_name"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="222dp"
-                android:orientation="vertical"
-                android:layout_marginRight="16dp"
                 android:layout_marginLeft="16dp"
-                >
+                android:layout_marginTop="222dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:id="@+id/age_rating"
@@ -69,29 +68,28 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Avengers:\nEnd Game"
+                    android:layout_marginTop="8dp"
                     android:width="343dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:lineHeight="40dp"
+                    android:text="Avengers:\nEnd Game"
+                    android:textColor="#ECECEC"
                     android:textFontWeight="900"
                     android:textSize="40dp"
-                    android:lineHeight="40dp"
-                    android:textStyle="bold"
-                    android:textColor="#ECECEC"
-                    android:layout_marginTop="8dp"
-                    />
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/tags"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="@+id/film_name"
-                app:layout_constraintTop_toBottomOf="@id/film_name"
-                app:layout_constraintEnd_toEndOf="@id/film_name"
-                android:text="Action, Adventure, Fantasy"
                 android:layout_marginTop="4dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginLeft="16dp"
-                android:textColor="#FF3466"/>
+                android:fontFamily="@font/roboto_regular"
+                android:text="Action, Adventure, Fantasy"
+                android:textColor="#FF3466"
+                app:layout_constraintEnd_toEndOf="@id/film_name"
+                app:layout_constraintStart_toStartOf="@+id/film_name"
+                app:layout_constraintTop_toBottomOf="@id/film_name" />
 
             <LinearLayout
                 android:id="@+id/reviews"
@@ -105,109 +103,72 @@
                 android:layout_marginTop="4dp"
                 android:orientation="horizontal">
 
-
-                <LinearLayout
+                <RatingBar
+                    style="@style/CustomRatingBarStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
-                        android:src="@drawable/ic_baseline_selected_star_12" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_baseline_selected_star_12" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_baseline_selected_star_12" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_baseline_selected_star_12" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_baseline_not_selected_star_12" />
-                </LinearLayout>
-
-<!--                <RatingBar-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:numStars="5"-->
-<!--                    android:isIndicator="true"-->
-<!--                    android:rating="4"-->
-<!--                    android:stepSize="0.5" />-->
+                    android:layout_marginTop="2dp"
+                    android:numStars="5"
+                    android:rating="4"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="125 Reviews"
+                    android:fontFamily="@font/roboto_bold"
                     android:textColor="#6D6D80"
                     />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/description"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="@id/reviews"
-                app:layout_constraintEnd_toEndOf="@id/reviews"
-                app:layout_constraintTop_toBottomOf="@id/reviews"
-                android:orientation="vertical"
-                android:layout_marginRight="16dp"
                 android:layout_marginTop="24dp"
-                android:layout_marginLeft="16dp">
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@id/reviews"
+                app:layout_constraintStart_toStartOf="@id/reviews"
+                app:layout_constraintTop_toBottomOf="@id/reviews">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#ECECEC"
                     android:text="Storyline"
-                    />
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="#ECECEC" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
                     android:layout_marginTop="4dp"
-                    android:textColor="@color/white"
                     android:text="After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe."
-                    />
+                    android:textColor="@color/white" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/cast"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="@id/description"
-                app:layout_constraintEnd_toEndOf="@id/description"
-                app:layout_constraintTop_toBottomOf="@id/description"
-                android:layout_marginRight="16dp"
-                android:layout_marginLeft="16dp"
                 android:layout_marginTop="24dp"
                 android:orientation="vertical"
-                >
+                app:layout_constraintEnd_toEndOf="@id/description"
+                app:layout_constraintStart_toStartOf="@id/description"
+                app:layout_constraintTop_toBottomOf="@id/description">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#ECECEC"
                     android:text="Cast"
-                    />
+                    android:textColor="#ECECEC" />
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:orientation="horizontal"
-                    >
+                    android:layout_marginBottom="109dp"
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -230,6 +191,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="6dp"
                                 android:layout_marginRight="8dp"
+                                android:fontFamily="@font/roboto_regular"
                                 android:text="Robert Downey Jr."
                                 android:textColor="@color/white" />
                         </LinearLayout>
@@ -248,6 +210,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
                                 android:layout_marginTop="6dp"
                                 android:layout_marginRight="8dp"
                                 android:text="Chris Evans"
@@ -268,6 +231,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
                                 android:layout_marginTop="6dp"
                                 android:layout_marginRight="8dp"
                                 android:text="Mark Ruffalo"
@@ -288,6 +252,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
                                 android:layout_marginTop="6dp"
                                 android:layout_marginRight="8dp"
                                 android:text="Chris Hemsworth"
@@ -308,6 +273,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
                                 android:layout_marginTop="6dp"
                                 android:layout_marginRight="8dp"
                                 android:text="Robert Downey Jr."
@@ -328,6 +294,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
                                 android:layout_marginTop="6dp"
                                 android:layout_marginRight="8dp"
                                 android:text="Robert Downey Jr."
@@ -348,21 +315,20 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
                                 android:layout_marginTop="6dp"
                                 android:layout_marginRight="8dp"
                                 android:text="Robert Downey Jr."
                                 android:textColor="@color/white" />
                         </LinearLayout>
+
                     </LinearLayout>
 
                 </HorizontalScrollView>
-
 
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
